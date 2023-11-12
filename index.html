@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サインアップ</title>
+    <style>
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>サインアップ</h2>
+    <form id="signupForm">
+        <label for="signupUsername">ユーザー名:</label>
+        <input type="text" id="signupUsername" name="signupUsername" required>
+
+        <label for="signupPassword">パスワード:</label>
+        <input type="password" id="signupPassword" name="signupPassword" required>
+
+        <button type="button" onclick="signup()">サインアップ</button>
+        <p id="signupStatus"></p>
+    </form>
+
+    <script>
+        // サインアップ処理
+        async function signup() {
+            const username = document.getElementById("signupUsername").value;
+            const password = document.getElementById("signupPassword").value;
+
+            // サインアップのバリデーションや他の処理をここに追加
+
+            // GitHub Pagesではサーバーサイドの処理ができないため、サインアップ処理を他のサービスに委託する必要があります。
+
+            // 以下は例として、コンソールにサインアップ情報を表示するだけの処理です。
+            console.log(`サインアップ: ユーザー名 - ${username}, パスワード - ${password}`);
+            document.getElementById("signupStatus").innerText = "サインアップが完了しました。";
+        }
+    </script>
+
+</body>
+</html>
